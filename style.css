@@ -1,36 +1,58 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-family: 'Montserrat', sans-serif;
 }
-.w-100{
+
+body {
+  display: relative;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-block {
+  display: block;
+}
+
+.social-icons:hover {
+  color: rgb(236, 236, 236);
+}
+
+.w-100 {
   width: 100% !important;
 }
+
 header {
   position: fixed;
   z-index: 1000;
   background: #fff;
+  box-shadow: 0px 5px 8px rgba(51, 51, 51, 0.281);
 }
 
 nav {
-  display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
 }
 
 .logo {
+
   display: inline-block;
-  width: 40%;
   display: flex;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  width: 40%;
 }
 
 .logo a {
-  display: flex;
   align-items: center;
   justify-content: flex-start;
   color: #000;
@@ -38,40 +60,46 @@ nav {
 }
 
 .logo a h1 {
-  font-size: 1.5rem;
+  /* font-family: 'Yeseva One', cursive !important; */
+  font-size: 1.4rem;
   background: rgb(255, 255, 255);
 }
 
 .logo a span {
+  /* font-family: 'Yeseva One', cursive !important; */
   color: #850202;
 }
 
 img {
   filter: invert(1);
-  max-width: 30%;
+  max-width: 40%;
   height: auto;
   margin: 0 0.5rem;
 }
 
 .nav-links ul {
-  display: flex;
   align-items: center;
-  /* justify-content: space-between; */
+}
+
+.nav-links {
+  transition: 0.3s;
 }
 
 .nav-links ul li {
   list-style: none;
-  padding: 20px 10px;
   transition: 0.2s linear;
+  height: 100%;
 }
 
 .nav-links ul li a {
   color: #000;
   text-decoration: none;
   text-transform: uppercase;
-  font-family: 'Roboto', sans-serif;
-  font-size: 18px;
-
+  font-weight: 500;
+  /* font-size: 1.2rem; */
+  height: 100%;
+  display: block;
+  padding: 20px 10px;
 }
 
 .nav-links ul li:hover {
@@ -84,18 +112,34 @@ img {
 
 section {
   position: relative;
-  min-height: 100vh;
   padding: 2rem;
+  min-height: 100vh;
 }
 
 .sec-1 {
-  box-shadow: inset 0 0 20px 1000px rgba(0, 0, 0, 0.4);
-  display: flex;
+  box-shadow: inset 0 0 20px 1000px rgba(0, 0, 0, 0.65);
+
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
   color: #fff;
+}
+
+.social {
+  position: absolute;
+  z-index: 100;
+  color: #000;
+  display: inline-block;
+  top: 50%;
+  right: 0;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.425);
+}
+
+.social a {
+  display: block;
+  color: rgb(255, 255, 255);
 }
 
 .sec-1::before {
@@ -114,29 +158,25 @@ section {
 .sec-1 h1 {
   font-size: 4rem;
   margin-bottom: 1rem;
+  text-align: center !important;
 }
 
 .sec-1 h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
   font-weight: 400;
-
   text-align: center;
 }
 
 .sec-2 {
-  display: flex;
   color: rgb(255, 255, 255);
   justify-content: center;
   align-items: flex-end;
   flex-direction: column;
-  box-shadow: inset 0 0 20px 1000px rgba(0, 0, 0, 0.6);
-  font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
-  /* background: #fff; */
+  box-shadow: inset 0 0 20px 1000px rgba(0, 0, 0, 0.65);
 }
 
 .sec-2::before {
-  background-attachment: fixed;
   z-index: -1;
   background: url("./img/bg4.jpg") no-repeat center center/cover;
   position: absolute;
@@ -154,25 +194,20 @@ section {
 }
 
 .sec-2 .content {
-  width: 50%;
+  width: 60%;
 }
 
 .sec-2 .content p {
   margin-bottom: 1rem;
-  /* line-height: 20px; */
-  font-size: 1.3rem;
+  text-align: justify;
 }
 
 .sec-3 {
-  display: flex;
   color: rgb(255, 255, 255);
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  box-shadow: inset 0 0 20px 1000px rgba(0, 0, 0, 0.6);
-  /* padding: 5rem 0 0rem 2rem; */
-  /* background: #fff; */
-  font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  box-shadow: inset 0 0 20px 1000px rgba(0, 0, 0, 0.65);
 }
 
 .sec-3::before {
@@ -196,7 +231,6 @@ section {
   font-size: 1.3rem;
   display: block;
   font-style: italic;
-  font-family: 'Times New Roman', Times, serif !important;
 }
 
 .sec-3 .content {
@@ -210,6 +244,7 @@ section {
 .sec-3 .content p {
   margin-top: 1rem;
   text-align: start;
+  text-align: justify;
 }
 
 .sec-3 .content img {
@@ -223,17 +258,12 @@ section {
   font-size: 1.5rem;
 }
 
-
-
 .sec-4 {
-  display: flex;
   color: rgb(255, 255, 255);
   justify-content: center;
   align-items: flex-end;
   flex-direction: column;
-  box-shadow: inset 0 0 20px 1000px rgba(0, 0, 0, 0.6);
-  /* background: #fff; */
-  /* font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif; */
+  box-shadow: inset 0 0 20px 1000px rgba(0, 0, 0, 0.65);
 }
 
 .sec-4::before {
@@ -250,8 +280,7 @@ section {
 }
 
 .sec-4 .content {
-  /* font-size: 1.3rem; */
-  width: 50%;
+  width: 60%;
 }
 
 .sec-4 h1 {
@@ -260,27 +289,23 @@ section {
 
 .sec-4 h2 {
   font-size: 1.8rem;
-  font-family: 'Times New Roman', Times, serif;
   margin-top: 1.3rem;
 }
 
 .sec-4 li {
   font-size: 1.4rem;
-  margin-top: 0.7rem;
-  font-family: inherit;
+  margin: 2rem 0;
+
 }
-
-
 
 .sec-4 .content p {
   margin-bottom: 0.6rem;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 1.2rem;
-  line-height: 1.8rem;
+  /* font-size: 1.2rem; */
+  font-weight: light;
+  text-align: justify;
 }
 
 .sec-5 {
-  display: flex;
   color: rgb(0, 0, 0);
   justify-content: center;
   align-items: center;
@@ -288,18 +313,17 @@ section {
 }
 
 .container {
-  width: 85%;
-  font-family: Calibri, 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  width: 85% !important;
+  margin: 0 auto;
 }
 
 .sec-5 .container .head {
   margin-bottom: 1.5rem;
-  font-family: 'Times New Roman', Times, serif;
 }
 
 .sec-5 .container .head h1 {
   font-size: 2rem;
-  font-weight: lighter;
+  font-weight: 300;
   margin-top: 1.3rem;
 }
 
@@ -310,33 +334,30 @@ section {
 
 .sec-5 .container .content p {
   margin-bottom: 1rem;
-  font-size: 1.2rem;
+  /* font-size: 1.2rem; */
 }
 
 .sec-5 .container .card-container {
-  display: flex;
-  /* align-items: center; */
   justify-content: center;
   flex-wrap: wrap;
 }
 
 .sec-5 .card {
-  background: #5B9BD5;
+  background: #ffffff;
   width: 250px;
   margin: 1rem;
-  display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   flex-direction: column;
   padding: 2rem 1rem;
-  border: 1px solid #41719C;
+  border: 1px solid #000000;
   border-radius: 5px;
 }
 
 .sec-5 .card p {
   text-align: center;
   margin: 0.5rem;
-  color: #fff;
+  color: rgb(0, 0, 0);
 }
 
 .sec-5 .card h4 {
@@ -349,21 +370,19 @@ section {
 .sec-5 .card a {
   text-align: center;
   margin-bottom: 0.5rem;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   text-decoration: none;
   text-align: center;
   display: block;
 }
 
 .sec-5 .sec-footer .card {
-  display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
 }
 
 .sec-5 .sec-footer {
-  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -372,16 +391,15 @@ section {
 .sec-5 .sec-footer .card p {
   text-align: left;
   margin: 0.5rem 0;
-  color: #fff;
+  color: rgb(0, 0, 0);
 }
 
 .sec-6 {
-  display: flex;
-  color: rgb(255, 255, 255);
+  color: rgb(2, 2, 2);
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: #1b1b1b;
+  background: #FCFCFC;
 
 }
 
@@ -392,64 +410,63 @@ section {
 
 .sec-6 .head {
   margin: 1.3rem 0;
-  /* font-size: 2rem; */
 }
 
-.sec-6 .head p {
-  font-size: 1.4rem;
-}
+/* .sec-6 .head p {
+  font-size: 1.4rem; 
+} */
 
 .container .card-container {
-  display: flex;
-  /* align-items: center; */
   justify-content: center;
   flex-wrap: wrap;
 }
 
 .card {
-  background: #5B9BD5;
   width: 250px;
   margin: 1rem;
-  display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 2rem 1rem;
-  border: 1px solid #41719C;
+  padding: 1.5rem 1rem;
+  border: 1px solid #000000;
   border-radius: 5px;
 }
 
 .card h4 {
   text-align: center;
   margin-bottom: 0.5rem;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
 }
 
 .card h2 {
   text-align: center;
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
-  color: rgb(255, 255, 255);
+  color: rgb(8, 8, 8);
 }
 
 .card p {
   text-align: center;
-  font-size: 1.2rem;
   margin: 1rem 0rem;
-  line-height: 1.5rem;
-  color: #fff;
+  /* line-height: 1.5rem; */
+  color: rgb(0, 0, 0);
 }
 
 .card a {
   text-align: center;
   margin-bottom: 0.5rem;
-  font-size: 1.5rem;
-  color: rgb(255, 255, 255);
+  font-size: 1.2rem;
+  color: rgb(86 86 86) !important;
   text-decoration: none;
+  text-align: center;
+  display: block;
+}
+
+.card a:hover {
+  color: rgb(0 0 0) !important;
 }
 
 .sec-7 {
-  display: flex;
   color: rgb(0, 0, 0);
   justify-content: center;
   align-items: center;
@@ -457,19 +474,61 @@ section {
   background: #ffffff;
 }
 
+
 .sec-7 h1 {
   font-size: 2rem;
 }
 
 .sec-7 .card p,
 .sec-7 .card h3 {
-  text-align: start;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   margin: 0.2rem;
+  text-align: center;
 }
 
 .sec-7 .card p {
-  font-family: 'Times New Roman', Times, serif;
+  font-size: 1rem;
+  ;
+}
+
+.sec-7 .card p {
+  overflow-y: auto;
+  max-height: 200px;
+}
+
+.sec-7 .card p::-webkit-scrollbar {
+  display: none;
+}
+
+.sec-8 {
+  color: rgb(0, 0, 0);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #f9f9f9;
+}
+
+.sec-8 .card {
+  border-radius: 10px;
+  display: inline-block;
+  width: max-content;
+}
+
+.sec-8 .card a {
+  display: block;
+}
+
+.sec-8 .card h1 {
+  margin: 0 auto;
+  /* color: #e03a3c; */
+  /* border: 1px #ffffff dashed; */
+  border-radius: 50%;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
@@ -478,7 +537,6 @@ h1 {
 
 .italic {
   font-style: italic;
-  font-family: 'Times New Roman', Times, serif;
 }
 
 #menu {
@@ -486,133 +544,30 @@ h1 {
   display: none;
 }
 
-@media (max-width: 1180px) {
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 10px 20px;
-    background: #fff;
-  }
-
-  .logo {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .logo a h1 {
-    font-size: 1.3rem;
-  }
-
-  #menu {
-    font-size: 25px;
-    background: none;
-    outline: none;
-    border: none;
-    padding: 5px;
-    display: block;
-  }
-
-  .logo a img {
-    max-width: 25%;
-  }
-
-  .nav-links {
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    background: #fff;
-  }
-
-  .hide {
-    height: 0;
-  }
-
-  .nav-links ul {
-    width: 100%;
-    flex-direction: column;
-  }
-
-  .nav-links ul li {
-    width: 100%;
-    text-align: center;
-  }
-
-  .nav-links ul li a {
-    padding: 10px 0;
-    width: 100%;
-  }
-
-
-  .card-container {
-    width: 100% !important;
-  }
-
-
+footer {
+  padding: 1rem 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-@media (max-width: 900px) {
-  .logo a img {
-    max-width: 40%;
-  }
-
-  .logo a h1 {
-    font-size: 1.1rem;
-  }
-
-  .container {
-    width: 100% !important;
-  }
-
-  .sec-1 h1 {
-    font-size: 3rem;
-  }
-
-  .sec-2 .content {
-    width: 100%;
-  }
-
-  .sec-3 .content {
-    width: 100%;
-  }
-
-  .sec-4 .content {
-    width: 100%;
-  }
-  .sec-4 li {
-    margin:1rem;
-  }
-  
-  section {
-    padding: 1rem !important;
-  }
+footer p {
+  font-size: 1rem;
 }
 
-@media (max-width: 600px) {
-  .logo a img {
-    max-width: 50%;
-  }
-
-
-  .logo a h1 {
-    font-size: 0.9rem;
-  }
-
-  .sec-1 h1 {
-    font-size: 2rem;
-  }
-
-  .sec-1 h2 {
-    font-size: 1.5rem;
-  }
-
-  .card {
-    margin: 1rem 0.5rem !important;
-  }
-
-  .sec-5 .sec-footer .card {
-    width: 250px !important;
-  }
+footer .social {
+  position: relative;
+  padding: 0;
+  background: none;
+  display: flex;
 }
 
+footer .social a {
+  color: #000 !important;
+  margin: 0 .5rem;
+}
+
+footer .social a:hover {
+  color: rgb(77, 77, 77) !important;
+}

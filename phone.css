@@ -1,0 +1,176 @@
+@media (max-width: 1180px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    background: #fff;
+  }
+
+  .logo {
+    padding: 10px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo a h1 {
+    font-size: 1.5rem;
+  }
+
+  #menu {
+    font-size: 25px;
+    background: none;
+    outline: none;
+    border: none;
+    padding: 5px;
+    display: block;
+  }
+
+  .logo a img {
+    max-width: 25%;
+  }
+
+  .nav-links {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+  }
+
+  .hide {
+    height: 0;
+  }
+
+  .nav-links ul {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .nav-links ul li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-links ul li a {
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  .container {
+    width: 90% !important;
+  }
+
+
+  .card-container {
+    width: 100% !important;
+  }
+
+  .social {
+    font-size: 1.5rem;
+    padding: 1rem 1rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .logo a img {
+    max-width: 40%;
+  }
+
+  .logo a h1 {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    width: 100% !important;
+  }
+
+  .sec-1 h1 {
+    font-size: 3rem;
+  }
+
+  .sec-2 .content {
+    width: 100%;
+  }
+
+  .sec-3 .content {
+    width: 100%;
+  }
+
+  .sec-4 .content {
+    width: 100%;
+  }
+
+  .sec-4 li {
+    margin: 1rem;
+  }
+
+  .sec-8 .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sec-8 .card-container .card {
+    width: 250px;
+    flex-direction: column;
+  }
+
+  .sec-8 .card p {
+    display: none;
+  }
+
+  /* .sec-8 .card p{
+    display: none;
+  } */
+
+  section {
+    padding: 1rem !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo a img {
+    max-width: 50%;
+  }
+
+  .sec-1::before {
+    background: url("./img/mbg1.jpg") no-repeat center center/cover;
+  }
+
+  .sec-2::before {
+    background: url("./img/mbg4.jpg") no-repeat center center/cover;
+  }
+
+  .sec-3::before {
+    background: url("./img/mbg3.jpg") no-repeat center center/cover;
+  }
+
+  .sec-4::before {
+    background: url("./img/mbg2.jpg") no-repeat center center/cover;
+  }
+
+  .logo a h1 {
+    font-size: 1.2rem;
+  }
+
+  .sec-1 h1 {
+    font-size: 2rem;
+  }
+
+  .sec-1 h2 {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    margin: 1rem 0.5rem !important;
+  }
+
+  .sec-5 .sec-footer .card {
+    width: 250px !important;
+    align-items: center;
+  }
+
+  .sec-5 .sec-footer .card p {
+    text-align: center !important;
+    text-align: left;
+  }
+}
